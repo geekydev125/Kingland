@@ -5,12 +5,14 @@ import DeskKingLandVisualSvg from '../assets/png/kingland-visual.png';
 import MobKingLandVisualSvg from '../assets/png/kingland-visual-mobile.png';
 import TelegramSvg from '../assets/icon/icon-telegram.svg';
 import TwitterSvg from '../assets/icon/icon-twitter.svg';
+import { useNavigate } from 'react-router-dom';
 
 export const ComingSoon = () => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <Container>
-        <KingLandLogo src={KingLandSvg} alt="king-Land-logo" />
+        <KingLandLogo src={KingLandSvg} alt="king-Land-logo" onClick={() => navigate('/')} />
         <KingLandVisual src={DeskKingLandVisualSvg} className="sm:block hidden" />
         <KingLandVisual src={MobKingLandVisualSvg} className="sm:hidden block w-[480px]" />
         <ButtonGroup>
@@ -23,7 +25,9 @@ export const ComingSoon = () => {
         </ButtonGroup>
         <PoweredBy>
           <SmallText>Powered by</SmallText>
-          <KingLogo src={KingLogoSvg} alt="king-logo" />
+          <a href={'https://king-finance.vercel.app'} rel="noopener noreferrer">
+            <KingLogo src={KingLogoSvg} alt="king-logo" />
+          </a>
         </PoweredBy>
       </Container>
     </Wrapper>
@@ -48,6 +52,7 @@ const Container = styled.div`
 const KingLandLogo = styled.img`
   width: 110px;
   height: auto;
+  cursor: pointer;
 `;
 
 const KingLandVisual = styled.img`
