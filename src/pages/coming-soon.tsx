@@ -14,10 +14,10 @@ export const ComingSoon = () => {
         <KingLandVisual src={DeskKingLandVisualSvg} className="sm:block hidden" />
         <KingLandVisual src={MobKingLandVisualSvg} className="sm:hidden block w-[480px]" />
         <ButtonGroup>
-          <SocialLeftBtn>
+          <SocialLeftBtn href={'https://t.me/KlNGfinance'} rel="noopener noreferrer">
             <Img src={TelegramSvg} alt="telegram-svg" />
           </SocialLeftBtn>
-          <SocialRightBtn>
+          <SocialRightBtn href={'https://twitter.com/klngfinance'} rel="noopener noreferrer">
             <Img src={TwitterSvg} alt="twitter-svg" />
           </SocialRightBtn>
         </ButtonGroup>
@@ -35,13 +35,14 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 4rem;
 `;
 
 const KingLandLogo = styled.img`
@@ -88,11 +89,11 @@ const SocialBtn = css`
   }
 `;
 
-const SocialLeftBtn = styled.div`
+const SocialLeftBtn = styled.a`
   ${SocialBtn}
   border-radius: 31px 0 0 31px;
 `;
-const SocialRightBtn = styled.div`
+const SocialRightBtn = styled.a`
   ${SocialBtn}
   border-radius: 0 31px 31px 0;
 `;
