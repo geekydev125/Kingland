@@ -8,7 +8,7 @@ import { Layout } from './layouts/layout';
 
 import { Home } from './pages/home';
 import { NotFoundPage } from './pages/404';
-import { ComingSoon } from './pages/coming-soon';
+import { ComingSoon } from './pages/ComingSoon';
 
 function App() {
   return (
