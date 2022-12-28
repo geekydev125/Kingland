@@ -46,7 +46,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem;
+  padding: 4rem 0;
 `;
 
 const KingLandLogo = styled.img`
